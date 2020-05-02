@@ -93,6 +93,7 @@ testRunner.runTestStepByName("View")
 def responseView = testRunner.testCase.getTestStepByName("View").getPropertyValue("response")
 def responseJSON3 = new JsonSlurper().parseText(responseView)
 
+
 def firstName = responseJSON3.data.first_name
 log.info firstName
 def middleName = responseJSON3.data.middle_name
